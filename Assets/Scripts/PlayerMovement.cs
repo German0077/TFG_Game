@@ -9,7 +9,15 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    // FixedUpdate is called 50x per frame
+    public PlayerCombat playerCombat;
+
+    void Update() {
+        if (Input.GetButtonDown("Sword_Attack")){ //Left Click already mapped on Unity
+            playerCombat.Attack();
+        }
+    }
+
+    // FixedUpdate is called 50x per second
     void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
