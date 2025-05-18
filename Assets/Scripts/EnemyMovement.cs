@@ -1,6 +1,7 @@
 //EnemyMovement.cs
 
 using UnityEngine;
+using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -32,17 +33,19 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > 0) {
-            timer -= Time.deltaTime;
-        }
-        
-        CheckForPlayer();
-
-        if (enemyState == EnemyState.Move) {
-            Move();
-        }
-        else if (enemyState == EnemyState.Attack) {
-            rb.linearVelocity = Vector2.zero;
+        if (enemyState != EnemyState.Knockback){     
+            CheckForPlayer();
+            
+            if (timer > 0) {
+                timer -= Time.deltaTime;
+            }
+            
+            if (enemyState == EnemyState.Move) {
+                Move();
+            }
+            else if (enemyState == EnemyState.Attack) {
+                rb.linearVelocity = Vector2.zero;
+            }
         }
     }
 
@@ -61,6 +64,21 @@ public class EnemyMovement : MonoBehaviour
         faceDirection *= -1;
         transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
+
+    public void Knockback(Transform player, float force, float knockBackTime, float stunTime) {
+        ChangeState(EnemyState.Knockback);
+        Vector2 direction = (transform.position - player.position).normalized;
+        rb.linearVelocity = direction * force;
+        StartCoroutine(KnockbackCounter(knockBackTime, stunTime));
+    }
+
+    IEnumerator KnockbackCounter(float knockBackTime, float stunTime) {
+        yield return new WaitForSeconds(knockBackTime);
+        rb.linearVelocity = Vector2.zero;
+        yield return new WaitForSeconds(stunTime);
+        ChangeState(EnemyState.Idle);
+    }
+
 
     private void CheckForPlayer() {
         
@@ -122,4 +140,4 @@ public class EnemyMovement : MonoBehaviour
     }
 }
 
-public enum EnemyState {Idle, Move, Attack}
+public enum EnemyState {Idle, Move, Attack, Knockback}
