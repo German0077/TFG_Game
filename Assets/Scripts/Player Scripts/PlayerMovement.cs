@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isKnockedBack;
 
     void Update() {
-        if (Input.GetButtonDown("Sword_Attack")){ //Left Click already mapped on Unity
+        if (Input.GetButtonDown("Sword_Attack")) { 
             playerCombat.Attack();
         }
     }

@@ -65,11 +65,11 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    public void Knockback(Transform player, float force, float knockBackTime, float stunTime) {
+    public void Knockback(Transform forceTransform, float force, float knockBackTime, float stunTime) {
         ChangeState(EnemyState.Knockback);
-        Vector2 direction = (transform.position - player.position).normalized;
-        rb.linearVelocity = direction * force;
         StartCoroutine(KnockbackCounter(knockBackTime, stunTime));
+        Vector2 direction = (transform.position - forceTransform.position).normalized;
+        rb.linearVelocity = direction * force;
     }
 
     IEnumerator KnockbackCounter(float knockBackTime, float stunTime) {
