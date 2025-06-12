@@ -26,7 +26,7 @@ public class PlayerCombat : MonoBehaviour
     }
 
     public void Attack() {
-        if (timer <= 0) {
+        if (timer <= 0 && enabled) {
             animator.SetBool("isAttacking", true);
             timer = cooldown;
         }

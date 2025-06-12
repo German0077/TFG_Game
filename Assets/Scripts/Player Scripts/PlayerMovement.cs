@@ -13,9 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public PlayerCombat playerCombat;
 
     private bool isKnockedBack;
+    public bool isShooting;
 
     void Update() {
-        if (Input.GetButtonDown("Sword_Attack")) { 
+        if (Input.GetButtonDown("Attack")) { 
             playerCombat.Attack();
         }
     }
@@ -23,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate is called 50x per second
     void FixedUpdate()
     {
-        if (isKnockedBack == false) {
+        if (isShooting == true) {
+            rb.linearVelocity = Vector2.zero;
+        }
+        else if (isKnockedBack == false) {
             float horizontal = Input.GetAxis("Horizontal");
             float vertical = Input.GetAxis("Vertical");
 

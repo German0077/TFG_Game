@@ -6,8 +6,12 @@ public class PlayerBow : MonoBehaviour
     public GameObject arrowPrefab;
     private Vector2 aimDirection = Vector2.right;
 
+    public PlayerMovement playerMovement;
+
     public float cooldown = 0.5f;
     private float timer;
+
+    public Animator animator;
 
     // Update is called once per frame
     void Update()
@@ -16,9 +20,20 @@ public class PlayerBow : MonoBehaviour
         
         Aiming();
                 
-        if (Input.GetButtonDown("Bow_Attack") && timer <= 0) { 
-            Shoot();
+        if (Input.GetButtonDown("Attack") && timer <= 0) { 
+           playerMovement.isShooting = true;
+           animator.SetBool("isShooting", true);
         }
+    }
+
+    private void OnEnable() {
+        animator.SetLayerWeight(0, 0);
+        animator.SetLayerWeight(1, 1);
+    }
+
+    private void OnDisable() {
+        animator.SetLayerWeight(0, 1);
+        animator.SetLayerWeight(1, 0);
     }
 
     private void Aiming() {
@@ -27,13 +42,19 @@ public class PlayerBow : MonoBehaviour
 
         if(horizontal != 0 || vertical !=0) {
             aimDirection = new Vector2(horizontal, vertical).normalized;
+            animator.SetFloat("aimX", aimDirection.x);
+            animator.SetFloat("aimY", aimDirection.y);
         }
     }
 
     public void Shoot() {
-        Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
-        arrow.direction = aimDirection;
-        timer = cooldown;
+        if (timer <= 0 ) {
+            Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
+            arrow.direction = aimDirection;
+            timer = cooldown;
+        }
+        animator.SetBool("isShooting", false);
+        playerMovement.isShooting = false;
     }
 
 }

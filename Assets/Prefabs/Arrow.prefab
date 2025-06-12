@@ -151,7 +151,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.10115659, y: 0.0064602047}
+  m_Offset: {x: 0.17362481, y: 0.0064602047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,7 +161,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7976868, y: 0.32106158}
+  m_Size: {x: 0.248124, y: 0.32106158}
   m_EdgeRadius: 0
 --- !u!114 &81952984291402314
 MonoBehaviour:
@@ -182,6 +182,11 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  arrowSprite: {fileID: 7270801642170774770}
+  buriedSprite: {fileID: -6662812116773042688, guid: dce49d969ccce234c975e49f934e05c4, type: 3}
   damage: 1
   knockBackForce: 20
   knockBackTime: 0.05
