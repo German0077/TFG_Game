@@ -5,6 +5,7 @@ public class PlayerBow : MonoBehaviour
     public Transform launchPoint;
     public GameObject arrowPrefab;
     private Vector2 aimDirection = Vector2.right;
+    private Vector2 shootDirection;
 
     public PlayerMovement playerMovement;
 
@@ -23,6 +24,7 @@ public class PlayerBow : MonoBehaviour
         if (Input.GetButtonDown("Attack") && timer <= 0) { 
            playerMovement.isShooting = true;
            animator.SetBool("isShooting", true);
+           shootDirection = aimDirection;
         }
     }
 
@@ -49,8 +51,11 @@ public class PlayerBow : MonoBehaviour
 
     public void Shoot() {
         if (timer <= 0 ) {
-            Arrow arrow = Instantiate(arrowPrefab, launchPoint.position, Quaternion.identity).GetComponent<Arrow>();
-            arrow.direction = aimDirection;
+            float offset = 0.4f; // Pequeña separación
+            Vector2 spawnPosition = (Vector2)launchPoint.position + shootDirection * offset;
+
+            Arrow arrow = Instantiate(arrowPrefab, spawnPosition, Quaternion.identity).GetComponent<Arrow>();
+            arrow.direction = shootDirection;
             timer = cooldown;
         }
         animator.SetBool("isShooting", false);

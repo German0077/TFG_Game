@@ -8,6 +8,7 @@ public class Arrow : MonoBehaviour
     public float lifeSpan = 2;
     public float speed;
 
+    public LayerMask playerLayer;
     public LayerMask enemyLayer;
     public LayerMask obstacleLayer;
 
@@ -33,7 +34,10 @@ public class Arrow : MonoBehaviour
     }
 
     public void OnCollisionEnter2D(Collision2D collision) {
-        if((enemyLayer.value &(1 << collision.gameObject.layer)) > 0) {
+        if ((playerLayer.value & (1 << collision.gameObject.layer)) > 0) {
+            return;
+        }
+        else if((enemyLayer.value &(1 << collision.gameObject.layer)) > 0) {
             collision.gameObject.GetComponent<EnemyHealth>().HealthChange(-damage);
             collision.gameObject.GetComponent<EnemyMovement>().Knockback(transform, knockBackForce, knockBackTime, stunTime);
             Attach(collision.gameObject.transform);
