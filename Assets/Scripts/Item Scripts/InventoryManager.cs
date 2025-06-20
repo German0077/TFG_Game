@@ -6,9 +6,15 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] itemSlots;
     public int gold;
     public TMP_Text goldText;
+    public Items weapon;
     
     private void Start()
     {
+        if (weapon != null) {
+            itemSlots[0].item = weapon;
+            itemSlots[0].quantity = 1;
+        }
+        
         foreach (var slot in itemSlots) {
             slot.UpdateUI();
         }
@@ -30,7 +36,7 @@ public class InventoryManager : MonoBehaviour
         }
         else {
             foreach (var slot in itemSlots) {
-                if (slot.item == null) {
+                if (slot.item == null && !slot.isWeaponSlot) {
                     slot.item = item;
                     slot.quantity = quantity;
                     slot.UpdateUI();
@@ -38,5 +44,11 @@ public class InventoryManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ChangeWeapon(Items weapon) {
+        itemSlots[0].item = weapon;
+        itemSlots[0].quantity = 1;
+        itemSlots[0].UpdateUI();
     }
 }

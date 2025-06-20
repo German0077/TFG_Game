@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
-  m_Name: Steak
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  itemName: Steak
-  itemDescription: "Un buen filete que aumenta el da\xF1o"
-  icon: {fileID: 5275429406482481447, guid: e6436005946a7c9439d72afa0b9bd3f5, type: 3}
+  itemName: Sword
+  itemDescription: La espada
+  icon: {fileID: 712035800519618848, guid: 8fe96eb60f8dffc44a68e87d0b6d16f0, type: 3}
   isGold: 0
   currentHealth: 0
   speed: 0
