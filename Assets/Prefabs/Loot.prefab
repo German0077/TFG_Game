@@ -195,4 +195,5 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 7405f0c1f68a3c3469e3afc72f4f68ca, type: 2}
   itemSprite: {fileID: 2641311409376374948}
   animator: {fileID: 1324098856749146963}
+  canCollect: 1
   quantity: 1

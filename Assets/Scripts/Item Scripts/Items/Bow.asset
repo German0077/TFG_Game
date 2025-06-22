@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
-  itemName: Sword
-  itemDescription: La espada
-  icon: {fileID: 712035800519618848, guid: 8fe96eb60f8dffc44a68e87d0b6d16f0, type: 3}
+  itemName: Bow
+  itemDescription: El arco
+  icon: {fileID: -7856493677412862020, guid: c535d24c95d837c4285c22b580366725, type: 3}
   isGold: 0
   currentHealth: 0
   speed: 0
