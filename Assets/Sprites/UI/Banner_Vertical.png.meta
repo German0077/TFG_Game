@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5bbb4b6e23d37fe4c927d74ee7c495b5
+guid: 261e04fd7d42b0a49b631a826ec5ca9e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4526638008314866843
-    second: Button_Red_9Slides_0
+      213: -6053722968521005444
+    second: Banner_Vertical_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
-  spriteBorder: {x: 25, y: 35, z: 25, w: 25}
+  spriteBorder: {x: 58, y: 60, z: 58, w: 45}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Button_Red_9Slides_0
+      name: Banner_Vertical_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 7
-        width: 180
-        height: 185
+        x: 35
+        y: 29
+        width: 122
+        height: 133
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b9ca3601949d1de30800000000000000
-      internalID: 4526638008314866843
+      spriteID: c76aeacb80bdcfba0800000000000000
+      internalID: -6053722968521005444
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Button_Red_9Slides_0: 4526638008314866843
+      Banner_Vertical_0: -6053722968521005444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

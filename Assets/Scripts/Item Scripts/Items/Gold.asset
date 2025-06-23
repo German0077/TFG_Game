@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Gold
   m_EditorClassIdentifier: 
-  itemName: Gold
+  itemName: Oro
   itemDescription: El dinero usado en este mundo
   icon: {fileID: -7942359355602504142, guid: 051fd207419f41245b52b52270be0095, type: 3}
   isGold: 1

@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: 1324098856749146963}
   - component: {fileID: 6918318638607807628}
   m_Layer: 0
-  m_Name: Pumpkin
+  m_Name: Calabaza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

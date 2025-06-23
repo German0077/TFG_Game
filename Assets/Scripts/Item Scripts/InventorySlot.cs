@@ -13,24 +13,50 @@ public class InventorySlot : MonoBehaviour, IPointerClickHandler
     public TMP_Text quantityText;
 
     public InventoryManager inventory;
+    private static ShopManager activeShop;
 
     private void Start() {
         inventory = GetComponentInParent<InventoryManager>();
     }
 
+    private void OnEnable() {
+        ShopVendor.ShopToggled += ToggleShopUI;
+    }
+
+    private void OnDisable() {
+        ShopVendor.ShopToggled -= ToggleShopUI;
+    }
+
+    private void ToggleShopUI(ShopManager shop, bool isOpen) {
+        activeShop = isOpen ? shop: null;
+
+    }
+
     public void OnPointerClick(PointerEventData eventData) {
         if (quantity > 0 && !isWeaponSlot) {
             if (eventData.button == PointerEventData.InputButton.Left) {
-                inventory.UseItem(this);
+                if (activeShop != null) {
+                    activeShop.SellItem(item);
+                    quantity--;
+                    UpdateUI();
+                }
+                else {
+                    inventory.UseItem(this);
+                }
             }
             else if (eventData.button == PointerEventData.InputButton.Right) {
-                inventory.DropItem(this);
+                if (activeShop == null) {
+                    inventory.DropItem(this);
+                }
             }
         }
     }
     
     public void UpdateUI()
     {
+        if (quantity <= 0) {
+            item = null;
+        }
         if (item != null) {
             itemImage.sprite = item.icon;
             itemImage.gameObject.SetActive(true);

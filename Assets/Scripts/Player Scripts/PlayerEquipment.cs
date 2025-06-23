@@ -8,6 +8,7 @@ public class PlayerEquipment : MonoBehaviour
     
     public Items swordItem;
     public Items bowItem;
+    public bool hasBow = false;
     
     void Update()
     {
@@ -17,10 +18,16 @@ public class PlayerEquipment : MonoBehaviour
             inventory.ChangeWeapon(swordItem);
         }
 
-        if (Input.GetButtonDown("ChangeBow")) {
+        if (Input.GetButtonDown("ChangeBow") && hasBow) {
             sword.enabled = false;
             bow.enabled = true;
             inventory.ChangeWeapon(bowItem);
         }
+    }
+
+    public void EquipBow() {
+        sword.enabled = false;
+        bow.enabled = true;
+        inventory.ChangeWeapon(bowItem);
     }
 }

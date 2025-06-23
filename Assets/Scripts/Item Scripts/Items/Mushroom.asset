@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
-  itemName: Mushroom
+  itemName: Seta
   itemDescription: Esta curiosa seta mejora la velocidad durante un par de segundos
   icon: {fileID: 2014286878, guid: 3a0eab53a64f219459a6759db161fda9, type: 3}
   isGold: 0

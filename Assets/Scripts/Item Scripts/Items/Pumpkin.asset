@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Pumpkin
   m_EditorClassIdentifier: 
-  itemName: Pumpkin
+  itemName: Calabaza
   itemDescription: Esta calabaza nutritiva cura un punto de salud
   icon: {fileID: 8389134475083476877, guid: 2ee4fc910d4c13c46a40bb89774882f2, type: 3}
   isGold: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Steak
   m_EditorClassIdentifier: 
-  itemName: Steak
+  itemName: Filete
   itemDescription: "Un buen filete que aumenta el da\xF1o durante 10 segundos"
   icon: {fileID: 5275429406482481447, guid: e6436005946a7c9439d72afa0b9bd3f5, type: 3}
   isGold: 0
