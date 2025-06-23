@@ -20,6 +20,8 @@ public class EnemyMovement : MonoBehaviour
     public float playerDetectRange = 5;
     public Transform detectionPoint;
     public LayerMask playerLayer;
+
+    private GameObject attachedArrow;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,8 +67,9 @@ public class EnemyMovement : MonoBehaviour
         transform.localScale = new Vector3 (transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
     }
 
-    public void Knockback(Transform forceTransform, float force, float knockBackTime, float stunTime) {
+    public void Knockback(Transform forceTransform, float force, float knockBackTime, float stunTime, GameObject arrow) {
         ChangeState(EnemyState.Knockback);
+        attachedArrow = arrow;
         StartCoroutine(KnockbackCounter(knockBackTime, stunTime));
         Vector2 direction = (transform.position - forceTransform.position).normalized;
         rb.linearVelocity = direction * force;
@@ -75,6 +78,10 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator KnockbackCounter(float knockBackTime, float stunTime) {
         yield return new WaitForSeconds(knockBackTime);
         rb.linearVelocity = Vector2.zero;
+        if (attachedArrow != null) {
+            Destroy(attachedArrow);
+            attachedArrow = null;
+        }
         yield return new WaitForSeconds(stunTime);
         ChangeState(EnemyState.Idle);
     }

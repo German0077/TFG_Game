@@ -191,6 +191,6 @@ MonoBehaviour:
   arrowSprite: {fileID: 7270801642170774770}
   buriedSprite: {fileID: -6662812116773042688, guid: dce49d969ccce234c975e49f934e05c4, type: 3}
   damage: 1
-  knockBackForce: 20
-  knockBackTime: 0.05
-  stunTime: 0.1
+  knockBackForce: 5
+  knockBackTime: 0.2
+  stunTime: 0.15

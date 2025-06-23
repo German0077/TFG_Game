@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   itemName: Arco
-  itemDescription: El arco
+  itemDescription: Este elegante arco te permite atacar a distancia
   icon: {fileID: -7856493677412862020, guid: c535d24c95d837c4285c22b580366725, type: 3}
   isGold: 0
   currentHealth: 0
   speed: 0
-  damage: 0
+  damage: 1
   duration: 0

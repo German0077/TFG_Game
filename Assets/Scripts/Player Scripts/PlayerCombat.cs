@@ -37,7 +37,7 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, weaponRange, enemyLayer);
         if (enemies.Length > 0) {
             enemies[0].GetComponent<EnemyHealth>().HealthChange(-damage);
-            enemies[0].GetComponent<EnemyMovement>().Knockback(transform, knockBackForce, knockBackTime, stunTime);
+            enemies[0].GetComponent<EnemyMovement>().Knockback(transform, knockBackForce, knockBackTime, stunTime, null);
         }
     }
 
