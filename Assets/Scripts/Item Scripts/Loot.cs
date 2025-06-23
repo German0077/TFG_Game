@@ -18,10 +18,10 @@ public class Loot : MonoBehaviour
         UpdateAppearance();
     }
 
-    public void Spawn(Items item, int quantity) {
+    public void Spawn(Items item, int quantity, bool CollectOnSpawn) {
         this.item = item;
         this.quantity = quantity;
-        canCollect = false;
+        canCollect = CollectOnSpawn;
         UpdateAppearance();
     }
 

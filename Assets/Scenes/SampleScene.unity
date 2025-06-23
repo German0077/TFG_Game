@@ -4361,7 +4361,7 @@ MonoBehaviour:
   - {fileID: 1581422531}
   - {fileID: 166077251}
   useItem: {fileID: 1377655250}
-  gold: 10
+  gold: 0
   goldText: {fileID: 810948917}
   weapon: {fileID: 11400000, guid: be6fbbbf7c445b349a403885ba154d3e, type: 2}
   lootPrefab: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
@@ -6148,6 +6148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 0
   maxHealth: 5
+  gold: {fileID: 11400000, guid: 3903053190ab67e4dbd94a05e041d9ea, type: 2}
+  goldAmount: 5
+  lootPrefab: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
 --- !u!1 &1693173815
 GameObject:
   m_ObjectHideFlags: 0
