@@ -31,7 +31,9 @@ public class ShopInfo : MonoBehaviour
             stats.Add("Daño: " + item.damage.ToString());
         if (item.duration > 0)
             stats.Add("Duración: " + item.duration.ToString());
-
+        else
+            stats.Add("");
+            
         if (stats.Count <= 0)
             return;
         for (int i = 0; i < statText.Length; i++) {
