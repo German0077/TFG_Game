@@ -17,6 +17,11 @@ public class GameOver : MonoBehaviour
     }
 
     public void MenuButton() {
+        Time.timeScale = 1;
+        if (GameManager.Instance != null) {
+            GameManager.Instance.FixAndDestroy();
+        }
         SceneManager.LoadScene("MenuScene");
+        gameObject.SetActive(false);
     }
 }

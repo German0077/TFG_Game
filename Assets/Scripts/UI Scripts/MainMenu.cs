@@ -8,6 +8,10 @@ public class MainMenu : MonoBehaviour
     }
 
     public void QuitGame() {
-        Aplication.Quit();
+#if UNITY_WEBGL
+
+#else
+        Application.Quit();
+#endif
     }
 }
