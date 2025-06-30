@@ -16,6 +16,11 @@ public class ShopVendor : MonoBehaviour
     [SerializeField] private List<ShopItems> shopItems;
     [SerializeField] private List<ShopItems> shopWeapons;
 
+    void Start() {
+        shopCanvas = GameManager.Instance.canvasGroup;
+        shop = GameManager.Instance.shopManager;
+    }
+    
     void Update()
     {
         if (playerClose) {

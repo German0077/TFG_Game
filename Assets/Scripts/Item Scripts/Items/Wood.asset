@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcfc66f1c97ac64428b107779b3b3e72, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
-  itemName: Wood
+  itemName: Madera
   itemDescription: Madera que puedes vender por 5 de oro
   icon: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
   isGold: 0

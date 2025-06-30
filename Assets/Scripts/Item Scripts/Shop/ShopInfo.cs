@@ -18,6 +18,9 @@ public class ShopInfo : MonoBehaviour
     }
 
     public void ShowInfo(Items item) {
+        if (item == null) {
+            return;
+        }
         infoPanel.alpha = 1;
         nameText.text = item.itemName;
         descriptionText.text = item.itemDescription;

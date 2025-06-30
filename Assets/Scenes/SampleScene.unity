@@ -2507,7 +2507,7 @@ Transform:
   m_GameObject: {fileID: 171101704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.669999, y: 9.85, z: 0}
+  m_LocalPosition: {x: 14.5, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3667,7 +3667,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 8
   m_TargetDisplay: 0
 --- !u!224 &357966764
 RectTransform:
@@ -3736,7 +3736,7 @@ PrefabInstance:
       objectReference: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
     - target: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_Name
-      value: Wood
+      value: Madera
       objectReference: {fileID: 0}
     - target: {fileID: 6872928806088631057, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4176,7 +4176,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9469315, y: -5.8305874, z: -10.044386}
+  m_LocalPosition: {x: -1.116931, y: -5.680588, z: -10.044386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4549,7 +4549,7 @@ PrefabInstance:
       objectReference: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
     - target: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_Name
-      value: Wood
+      value: Madera
       objectReference: {fileID: 0}
     - target: {fileID: 6872928806088631057, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4756,7 +4756,7 @@ PrefabInstance:
       objectReference: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
     - target: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_Name
-      value: Wood
+      value: Madera
       objectReference: {fileID: 0}
     - target: {fileID: 6872928806088631057, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4819,6 +4819,7 @@ GameObject:
   - component: {fileID: 697403895}
   - component: {fileID: 697403894}
   - component: {fileID: 697403896}
+  - component: {fileID: 697403897}
   m_Layer: 0
   m_Name: Cam1
   m_TagString: Untagged
@@ -4835,7 +4836,7 @@ Transform:
   m_GameObject: {fileID: 697403892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9469315, y: -5.8305874, z: -10.044386}
+  m_LocalPosition: {x: -1.116931, y: -5.680588, z: -10.044386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4923,6 +4924,18 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
+--- !u!114 &697403897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697403892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ac1479acd2d2ff4a8d56f0164c68741, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &710626123
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,7 +5141,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 00
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -5309,6 +5322,7 @@ MonoBehaviour:
   NewScene: Scene 2
   animator: {fileID: 40514379}
   fadeTime: 0.5
+  newPlayerPosition: {x: 39, y: 22.5}
   fadeCanvas: {fileID: 1124201159}
 --- !u!61 &870208612
 BoxCollider2D:
@@ -5796,6 +5810,60 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63dc9c0ffb2d59846a6a6450792b222e, type: 3}
+--- !u!1 &1083377514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1083377516}
+  - component: {fileID: 1083377515}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1083377515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083377514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98dea91a2f26f6c488b7a9aafa552644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  persistentObjects:
+  - {fileID: 736588641}
+  - {fileID: 171101704}
+  - {fileID: 1243576095}
+  - {fileID: 1377655244}
+  - {fileID: 357966760}
+  - {fileID: 177463802}
+  canvasGroup: {fileID: 357966765}
+  shopManager: {fileID: 357966766}
+  shopVendor: {fileID: 177463806}
+--- !u!4 &1083377516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1083377514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.664928, y: 10.37673, z: -0.038858008}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124201155
 GameObject:
   m_ObjectHideFlags: 0
@@ -6700,7 +6768,7 @@ PrefabInstance:
       objectReference: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
     - target: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_Name
-      value: Wood
+      value: Madera
       objectReference: {fileID: 0}
     - target: {fileID: 6872928806088631057, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6833,7 +6901,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!224 &1377655248
 RectTransform:
@@ -7877,7 +7945,7 @@ GameObject:
   - component: {fileID: 1448109411}
   m_Layer: 0
   m_Name: Confiner
-  m_TagString: Untagged
+  m_TagString: Confiner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23098,7 +23166,7 @@ PrefabInstance:
       objectReference: {fileID: -2067898546876541913, guid: d81d594d725530542ba5840d57dc6ca4, type: 3}
     - target: {fileID: 5275029502399470742, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_Name
-      value: Wood
+      value: Madera
       objectReference: {fileID: 0}
     - target: {fileID: 6872928806088631057, guid: c112f0cd78738a944a4227e0c504d56e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24282,14 +24350,15 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1083377516}
   - {fileID: 736588642}
-  - {fileID: 1448109412}
   - {fileID: 171101708}
-  - {fileID: 177463805}
-  - {fileID: 710626124}
-  - {fileID: 815203584}
   - {fileID: 1243576099}
   - {fileID: 1377655248}
   - {fileID: 357966764}
+  - {fileID: 177463805}
+  - {fileID: 710626124}
+  - {fileID: 815203584}
   - {fileID: 568512908}
   - {fileID: 870208613}
+  - {fileID: 1448109412}
