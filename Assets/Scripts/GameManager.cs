@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour
     public ShopManager shopManager; 
     public ShopVendor shopVendor;
 
+    [Header("Victory Settings")]
+    public int killsToWin;
+    private int currentKills;
+    public GameOver gameOverScreen;
+
     private void Awake() {
         if (Instance != null) {
             FixAndDestroy();
@@ -34,10 +39,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void FixAndDestroy() {
+    public void FixAndDestroy() {
         foreach (GameObject obj in persistentObjects) {
             Destroy(obj);
         }
         Destroy(gameObject);
+    }
+
+    public void AddKill() {
+        currentKills++;
+        if (currentKills >= killsToWin && gameOverScreen != null) {
+            gameOverScreen.ShowScreen();
+            Time.timeScale = 0;
+        }
     }
 }

@@ -21,6 +21,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0) {
             Destroy(gameObject);
             DropLoot(gold, goldAmount);
+            GameManager.Instance.AddKill();
         }
     }
 

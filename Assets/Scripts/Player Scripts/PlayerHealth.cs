@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     public SpriteRenderer playerSprite;
     public PlayerMovement playerMovement;
+    public GameOver gameOverScreen;
 
     // Start is called once before the first execution of Update
     void Start()
@@ -21,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0) {
             playerSprite.enabled = false;
             playerMovement.enabled = false;
+            gameOverScreen.ShowScreen();
+            Time.timeScale = 0;
         }
     }
 }
