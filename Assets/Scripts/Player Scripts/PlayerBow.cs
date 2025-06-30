@@ -56,6 +56,10 @@ public class PlayerBow : MonoBehaviour
 
             Arrow arrow = Instantiate(arrowPrefab, spawnPosition, Quaternion.identity).GetComponent<Arrow>();
             arrow.direction = shootDirection;
+            
+            int playerOrder = playerMovement.GetComponent<SpriteRenderer>().sortingOrder;
+            arrow.GetComponent<SpriteRenderer>().sortingOrder = playerOrder;
+
             timer = cooldown;
         }
         animator.SetBool("isShooting", false);
