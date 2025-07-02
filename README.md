@@ -38,6 +38,8 @@ Solo tienes que abrir el enlace y el juego cargará sin necesidad de descargar n
 
 Desarrollado por Germán Fábregas.
 
+Assets: [Tiny Swords by Pixel Frog](https://pixelfrog-assets.itch.io/tiny-swords)
 
+---
 
 ¡Gracias por jugar Little Knight!
